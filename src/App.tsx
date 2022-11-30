@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Sidenav from './components/Sidenav/Sidenav';
+import Header from './components/Header/Header';
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <div className="Background">
         <Sidenav />
         <div className="MainContent">
-          Main Content
+          <Header />
         </div>
       </div>
     </div>

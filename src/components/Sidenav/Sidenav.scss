@@ -1,13 +1,15 @@
 .sidenav {
-    width: 372px;
+    width: 380px;
     height: 100vh;
     color: #BCBCBC;
     position: sticky;
     overflow: hidden;
-    font-family: 'Avenir Next LT Pro', sans-serif;
+    font-family: 'Avenir Next', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
+    border-radius: 10px;
+    box-shadow: inset 0px 4px 8px rgba(252, 252, 252, 0.10);
 }
 
 .sidenav__wrapper {
@@ -21,8 +23,34 @@
     padding-top: 100px;
 }
 .sidenav__wrapper--link {
-    padding: 5px 110px 10px 5px;
+    padding: 0 5px 0 5px;
+    margin-right: 105px;
+    margin-left: 8px;
+    margin-bottom: 25px;
+    transition: all 200ms ease-in-out;
+    display: flex;
+    align-items: center;
+    div {
+        display: none;
+        width: 8px;
+        height: 28px;
+        background: #fff;
+        box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
+        border-radius: 40px;
+        
+    }
+    img {
+        margin-left: 8px;
+        display: inline-block;
+    }
     span {
-        padding: 8px;
+        display: inline-block;
+        margin: 16px;
+    }
+    &:hover {
+        cursor: pointer;
+        div {
+            display: inline-block;
+        }
     }
 }
