@@ -1,0 +1,10 @@
+.Background {
+  width: 100vw;
+  height: 100vh;
+  background: #282537;
+  display: flex;
+  background-image: -webkit-radial-gradient(left, circle cover, #111114b9 0%, #000 80%);
+  background-image: -moz-radial-gradient(left, circle cover, #111114b9 0%, #000 80%);
+  background-image: -o-radial-gradient(left, circle cover, #111114b9 0%, #000 80%);
+  background-image: radial-gradient(left, circle cover, #111114b9 0%, #000 80%);
+}
