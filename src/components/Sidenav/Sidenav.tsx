@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from "./../../assets/Logo.png";
+import Logo from "./../../assets/logo.svg";
 import DashIcon from "./../../assets/dash.svg";
 import ContentIcon from "./../../assets/content.svg";
 import DraftsIcon from "./../../assets/drafts.svg";
@@ -7,41 +7,67 @@ import AnalyticsIcon from "./../../assets/analytics.svg";
 import ProfileIcon from "./../../assets/profile.svg";
 import "./Sidenav.scss";
 
-const Sidenav = () => {
+interface SidenavProps {
+  active: string;
+  setActive: React.Dispatch<React.SetStateAction<string>>;
+}
+const Links = [
+  {
+    name: "Dashboard",
+    icon: DashIcon,
+    alt: "Dashboard Icon",
+  },
+  {
+    name: "Content",
+    icon: ContentIcon,
+    alt: "Content Icon",
+  },
+  {
+    name: "Draft",
+    icon: DraftsIcon,
+    alt: "Drafts Icon",
+  },
+  {
+    name: "Analytics",
+    icon: AnalyticsIcon,
+    alt: "Analytics Icon",
+  },
+  {
+    name: "Profile",
+    icon: ProfileIcon,
+    alt: "Profile Icon",
+  },
+];
+
+const Sidenav = (props: SidenavProps) => {
+  const {active, setActive} = props;
+
   return (
     <div className="sidenav">
       <div className="sidenav__wrapper">
         <img src={Logo} alt="Extent Logo" className="sidenav__wrapper--logo" />
         <div className='sidenav__wrapper--links'>
-          <div className="sidenav__wrapper--link">
-            <div></div>
-            <img src={DashIcon} alt="Dashboard Icon" />
-            <span>Dashboard</span>
-          </div>
+          {
+            Links.map((link) => {
+              if (active !== link.name) {
+                return (
+                  <div key={link.name} className="sidenav__wrapper--link" onClick={() => setActive(link.name)}>
+                    <div></div>
+                    <img src={link.icon} alt={link.alt} />
+                    <span>{link.name}</span>
+                  </div>
+                )
+              } 
 
-          <div className="sidenav__wrapper--link">
-            <div></div>
-            <img src={ContentIcon} alt="Content Icon" />
-            <span>Content</span>
-          </div>
-
-          <div className="sidenav__wrapper--link">
-            <div></div>
-            <img src={DraftsIcon} alt="Drafts Icon" />
-            <span>Draft</span>
-          </div>
-
-          <div className="sidenav__wrapper--link">
-            <div></div>
-            <img src={AnalyticsIcon} alt="Analytics Icon" />
-            <span>Analytics</span>
-          </div>
-
-          <div className="sidenav__wrapper--link">
-            <div></div>
-            <img src={ProfileIcon} alt="Profile Icon" />
-            <span>Profile</span>
-          </div>
+              return (
+                <div key={link.name} className="sidenav__wrapper--link active">
+                  <div></div>
+                  <img src={link.icon} alt={link.alt} />
+                  <span>{link.name}</span>
+                </div>
+              );
+            })
+          }
         </div>
       </div>
     </div>
