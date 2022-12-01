@@ -1,0 +1,14 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_19_140)">
+<path d="M16.6666 8.33337H33.3333V12.4938H37.5V8.33337C39.8021 8.33337 41.6666 10.2 41.6666 12.5V37.5C41.6666 39.8 39.8021 41.6667 37.5 41.6667V37.4938H33.3333V41.6667H16.6666V37.4938H12.5V41.6667C10.1979 41.6667 8.33331 39.8021 8.33331 37.5V12.5C8.33331 10.198 10.1979 8.33337 12.5 8.33337V12.4938H16.6666V8.33337ZM20.8333 31.25L30.2083 25L20.8333 18.75V31.25ZM37.5 33.3271V27.0771H33.3333V33.3271H37.5ZM37.5 22.9105V16.6605H33.3333V22.9105H37.5ZM16.6666 33.3271V27.0771H12.5V33.3271H16.6666ZM16.6666 22.9105V16.6605H12.5V22.9105H16.6666Z" fill="url(#paint0_angular_19_140)"/>
+</g>
+<defs>
+<radialGradient id="paint0_angular_19_140" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(25 25) rotate(90) scale(16.6667 16.6667)">
+<stop stop-color="white"/>
+<stop offset="1" stop-color="white" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_19_140">
+<rect width="50" height="50" fill="white"/>
+</clipPath>
+</defs>
+</svg>

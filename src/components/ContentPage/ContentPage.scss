@@ -1,0 +1,28 @@
+.content__wrapper {
+    padding: 96px;
+}
+
+.content__wrapper--title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 140.22%, #FFFFFF 140.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration-color: transparent;
+
+    span {
+        margin: 15px;
+    }
+}
+
+.content__wrapper--box {
+    box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25);
+    background: #000000;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    color: white;
+    margin: 15px;
+    padding: 58px 35px 35px 35px;
+}

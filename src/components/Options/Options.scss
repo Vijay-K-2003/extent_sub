@@ -1,0 +1,54 @@
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    z-index: 10;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 16px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
+}
+
+.image-container--img {
+    width: 100%;
+    object-fit: contain;
+    filter: grayscale(1);
+}
+
+.image-container-slided {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 16px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+@keyframes slideup {
+    from {
+        opacity: 0;
+        transform: translateY(25%);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.animate-slideup {
+    animation: slideup 1s ease-in-out;
+}

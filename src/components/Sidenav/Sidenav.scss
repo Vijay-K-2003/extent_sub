@@ -2,6 +2,7 @@
     width: 380px;
     height: 100vh;
     color: #BCBCBC;
+    background-color: #000;
     position: sticky;
     overflow: hidden;
     font-family: 'Avenir Next', sans-serif;
@@ -9,7 +10,7 @@
     font-weight: 700;
     font-size: 24px;
     border-radius: 10px;
-    box-shadow: inset 0px 4px 8px rgba(252, 252, 252, 0.10);
+    box-shadow: inset 0px 4px 8px rgba(252, 252, 252, 0.37);
 }
 
 .sidenav__wrapper {
