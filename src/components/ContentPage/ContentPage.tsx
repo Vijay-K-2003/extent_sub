@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContentList from './ContentList/ContentList';
 import Broadcast from "./../../assets/broadcast.svg";
 import "./ContentPage.scss";
@@ -17,8 +17,24 @@ export interface ContentPageProps {
   data: Array<ContentPageSingleObject>;
 }
 
+const tabs = [
+  {
+    title: "Videos",
+    component: ContentList
+  },
+  {
+    title: "Music",
+    component: ContentList
+  },
+  {
+    title: "Pictures",
+    component: ContentList
+  }
+];
+
 const ContentPage = (props: ContentPageProps) => {
   const { data } = props;
+  const [selectTab, setSelectTab] = useState(0);
   return (
     <div className="content">
       <div className="content__wrapper">
@@ -28,7 +44,21 @@ const ContentPage = (props: ContentPageProps) => {
         </div>
 
         <div className="content__wrapper--box">
-          <ContentList data={data} />
+          <div className="tabs">
+            <div className="tabs__videos" onClick={() => setSelectTab(0)}>
+              Videos
+            </div>
+            <div className="tabs__music" onClick={() => setSelectTab(1)}>
+              Music
+            </div>
+            <div className="tabs__picture" onClick={() => setSelectTab(2)}>
+              Picture
+            </div>
+          </div>
+          {
+            tabs[selectTab].title == "Videos" ?
+              <ContentList data={data} /> : "Not Yet Created"
+          }
         </div>
       </div>
     </div>
