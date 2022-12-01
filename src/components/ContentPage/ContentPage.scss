@@ -39,5 +39,11 @@
     color: #F3F3F3;
     div {
         margin: 0 20px;
+        padding: 10px;
+        &:hover {
+            text-underline-position: below;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 }

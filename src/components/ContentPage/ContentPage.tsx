@@ -4,6 +4,7 @@ import Broadcast from "./../../assets/broadcast.svg";
 import "./ContentPage.scss";
 
 export interface ContentPageSingleObject {
+  icon: string;
   title: string;
   description: string;
   date: string;

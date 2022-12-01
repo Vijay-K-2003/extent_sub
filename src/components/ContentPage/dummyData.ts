@@ -1,7 +1,9 @@
 import { ContentPageSingleObject } from "./ContentPage";
+import Profile from "./../../assets/defaultprofile.jpeg";
 
 const data: ContentPageSingleObject[] = [
     {
+        "icon": Profile,
         "title": "Why Web2 sucks?",
         "description": "Some important facts that matter.",
         "date": "22 Jan 2022",
@@ -11,6 +13,7 @@ const data: ContentPageSingleObject[] = [
         "preview": "Preview Link"
     },
     {
+        "icon": Profile,
         "title": "Why Web2 sucks?",
         "description": "Some important facts that matter.",
         "date": "22 Jan 2022",
@@ -20,6 +23,7 @@ const data: ContentPageSingleObject[] = [
         "preview": "Preview Link"
     },
     {
+        "icon": Profile,
         "title": "Why Web2 sucks?",
         "description": "Some important facts that matter.",
         "date": "22 Jan 2022",
@@ -29,6 +33,7 @@ const data: ContentPageSingleObject[] = [
         "preview": "Preview Link"
     },
     {
+        "icon": Profile,
         "title": "Why Web2 sucks?",
         "description": "Some important facts that matter.",
         "date": "22 Jan 2022",
@@ -38,6 +43,7 @@ const data: ContentPageSingleObject[] = [
         "preview": "Preview Link"
     },
     {
+        "icon": Profile,
         "title": "Why Web2 sucks?",
         "description": "Some important facts that matter.",
         "date": "22 Jan 2022",

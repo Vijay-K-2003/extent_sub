@@ -1,6 +1,7 @@
 import React from 'react';
 import { Scrollbars } from 'react-custom-scrollbars';
 import { ContentPageProps } from '../ContentPage';
+import "./ContentList.scss"
 
 const ContentList = (props: ContentPageProps) => {
     const { data } = props;
@@ -20,13 +21,20 @@ const ContentList = (props: ContentPageProps) => {
                 <Scrollbars renderThumbVertical={renderThumb} className='scroll' style={{ height: "40vh", backgroundColor: 'black' }} >
                     <div className="content-list__wrapper--item">
                         <table>
+
                             {
                                 data.map((d, idx) => {
                                     return (
-                                        <tr key={idx}>
+                                        <div>
+                                        <tr key={idx} className="data-row">
+                                            <td>
+                                                <div className="content-list__wrapper__item--icon">
+                                                    <img width={"40px"} height={"40px"} src={d.icon} alt="icon" />
+                                                </div>
+                                            </td>
                                             <td>
                                                 <div className="content-list__wrapper__item--title">
-                                                    {d.title} | {d.description}
+                                                    {d.title}<span>{d.description}</span>
                                                 </div>
                                             </td>
                                             <td>
@@ -55,6 +63,8 @@ const ContentList = (props: ContentPageProps) => {
                                                 </div>
                                             </td>
                                         </tr>
+                                        <div className="divider"></div>
+                                        </div>
                                     );
                                 })
                             }
